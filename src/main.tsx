@@ -1,5 +1,8 @@
 import { RouterProvider, createRouter } from '@tanstack/react-router';
 import ReactDOM from 'react-dom/client';
+import Layout from './components/Layout';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { TypographyProvider } from './contexts/TypographyContext';
 import { routeTree } from './routeTree.gen';
 
 // Set up a Router instance
@@ -19,5 +22,13 @@ const rootElement = document.getElementById('app')!;
 
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
-  root.render(<RouterProvider router={router} />);
+  root.render(
+    <ThemeProvider>
+      <TypographyProvider>
+        <Layout>
+          <RouterProvider router={router} />
+        </Layout>
+      </TypographyProvider>
+    </ThemeProvider>
+  );
 }
