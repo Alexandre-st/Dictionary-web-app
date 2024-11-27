@@ -8,18 +8,24 @@ export function Header() {
 
   return (
     <header
+      // className={css({
+      //   bg: 'background',
+      //   color: 'white',
+      //   padding: 2,
+      //   fontSize: 'xl',
+      //   fontWeight: 'bold',
+      // })}
       className={css({
-        backgroundColor: 'gray.800',
-        color: 'white',
-        padding: 2,
-        fontSize: 'xl',
-        fontWeight: 'bold',
+        padding: '16px',
+        backgroundColor: 'background',
+        color: 'text',
       })}
     >
       <div
         className={container({
           display: 'flex',
           justifyContent: 'space-between',
+          color: 'text',
         })}
       >
         Logo

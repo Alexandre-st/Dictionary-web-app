@@ -8,7 +8,7 @@ export const Route = createFileRoute('/')({
 function HomeComponent() {
   return (
     <div>
-      <div className={css({ fontSize: "4xl", fontWeight: 'bold', backgroundColor: 'red.300' })}>Hello 🐼!</div>
+      <div className={css({ fontSize: "4xl", bg: '#fff', _osDark: { bg: '#050505' }, color: 'text', fontWeight: 'bold', backgroundColor: 'red.300' })}>Hello 🐼!</div>
     </div>
   );
 }

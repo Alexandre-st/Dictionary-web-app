@@ -9,10 +9,8 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) return savedTheme;
-    }
 
-    // To use the system theme as the fallback theme
-    if (typeof window !== 'undefined') {
+      // To use the system theme as the fallback theme
       const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       return userPrefersDark ? 'dark' : 'light';
     }
